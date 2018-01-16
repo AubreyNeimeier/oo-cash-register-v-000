@@ -6,6 +6,8 @@ class CashRegister
   #if we want to read specific properties from an instance, we need to initialize
   #that method with a variable to hold the method
 
+  #NOTE the solution only has @ symbols in front of the variables in initialize, and then nowhere else
+
   def initialize(discount = 0)
     @total = 0
     @discount = discount
