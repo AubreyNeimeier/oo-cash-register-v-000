@@ -7,7 +7,7 @@ class CashRegister
   #that method with a variable to hold the method
 
   #NOTE the solution only has @ symbols in front of the variables in initialize, and then nowhere else
-
+  #remember that when we don't see a reciver, the implicit reciever is self.
   def initialize(discount = 0)
     @total = 0
     @discount = discount
@@ -19,6 +19,7 @@ class CashRegister
     @price = price
     @quantity = quantity
     @total += (@price * @quantity)
+    #could be written self.total += blah blah blah
     @last_transaction = (@price * @quantity)
     until @quantity == 0
       @items << @title
@@ -38,6 +39,8 @@ class CashRegister
 
   def void_last_transaction
     @total = @total - @last_transaction
+    #could be written
+    #self.total = self.total - self.last_transaction
   end
 
 end
