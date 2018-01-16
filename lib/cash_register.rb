@@ -8,6 +8,8 @@ class CashRegister
 
   #NOTE the solution only has @ symbols in front of the variables in initialize, and then nowhere else
   #remember that when we don't see a reciver, the implicit reciever is self.
+  #think about which variables need to be accessed across many methods. total
+  #certainly does. but price? Nope. no need to define as an instance variable (with @)
   def initialize(discount = 0)
     @total = 0
     @discount = discount
