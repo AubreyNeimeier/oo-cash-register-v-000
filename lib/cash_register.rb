@@ -1,6 +1,6 @@
 class CashRegister
 
-  attr_accessor :total, :discount, :items,
+  attr_accessor :total, :discount, :items
 
   #items IS a method. attr_accessor creates two instance methods.reader and getter method.
   #if we want to read specific properties from an instance, we need to initialize
@@ -35,7 +35,7 @@ class CashRegister
   end
 
   def void_last_transaction
-    total = total - @last_transaction
+    @total = @total - @last_transaction
   end
 
 end
